@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name='description' content='A simple startpage, suited to my needs.' />
+    <meta name='author' content='Milen Hristov' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>milen@firefox ~</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="startTime()">
+
+    <script>
+    function startTime() {
+        var today = new Date();
+        var hr = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+        // ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+        // hr = (hr == 0) ? 12 : hr;
+        // hr = (hr > 12) ? hr - 12 : hr;
+        hr = checkTime(hr);
+        min = checkTime(min);
+        sec = checkTime(sec);
+        document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec // + " " + ap;
+        
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var curWeekDay = days[today.getDay()];
+        var curDay = today.getDate();
+        var curMonth = months[today.getMonth()];
+        var curYear = today.getFullYear();
+        var date = curWeekDay+", "+curDay+" "+curMonth;
+        document.getElementById("date").innerHTML = date;
+        
+        var time = setTimeout(function(){ startTime() }, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+    </script>
+
+    <div class="clockdate">
+        <div class="clockdate-wrapper">
+          <div id="date"></div>
+          <div id="clock"></div>
+        </div>
+    </div>
+
+    <br>
+    <div class="search">
+        <form class="ddg textField" action="https://duckduckgo.com/" method="get">
+            <input class="input_box" type="text" name="q" placeholder="" type="input" />
+            <label class="form__label" for="name">🔍   S e a r c h   w i t h   D u c k D u c k G o</label>
+        </form>
+    </div>
+    <br><br>
+    <div class="bookmarks">
+        <br><br><br><br><br><br>
+        <div class="tools">
+            <h1><span class="c1"> tools, learn </span></h1>
+            <ul>
+                <li><a href='http://yesjapan.com' class='button'>JP from 0</a> <a href='https://stackexchange.com/' class='button'>StackExchange</a> <a href='http://stackoverflow.com/' class='button'>StackOverflow</a></li>
+                <br>
+                <li><a href='http://github.com/' class='button'>GitHub</a> <a href='https://softuni.bg/' class='button'>SoftUni</a> <a href='https://judge.softuni.bg/' class='button'>SU Judge</a></li>
+                <br>
+                <li><a href='http://sli.do' class='button'>Slido</a> <a href='https://pastebin.com/' class='button'>pastebin</a> <a href='http://ssavr.com/' class='button'>ssavr</a></li>
+                <br>
+                <li><a href='https://gmail.com' class='button'>gMail</a> <a href='http://mail.zoho.eu' class='button'>Zoho Mail</a> <a href='https://calendar.google.com/' class='button'>gCalendar</a></li>
+                <br>
+                <li><a href='http://docs.google.com/' class='button'>gDocs</a> <a href='https://docs.google.com/spreadsheets/u/0/' class='button'>gSheets</a> <a href='https://photos.google.com/' class='button'>gPhotos</a></li>
+                <br>
+                <li><a href='https://drive.google.com/' class='button'>gDrive</a> <a href='https://translate.google.com/' class='button'>gTranslate</a></li>
+                <br />
+            </ul>
+        </div>
+
+        <div class="media">
+            <h1><span class="c2"> media, games </span></h1>
+            <ul>
+                <li><a href='https://www.youtube.com/feed/subscriptions/' class='button'>YouTube</a> <a href='https://odysee.com' class='button'>Odysee</a> <a href='https://www.bitchute.com/' class='button'>BitChute</a></li>
+                <br>
+                <li><a href='https://mynoise.net/' class='button'>myNoise</a> <a href='http://cmd.to/' class='button'>cmd.to</a> <a href='https://kaldata.com' class='button'>Kaldata</a></li>
+                <br>
+                <li><a href='https://e-burgas.com/' class='button'>E-Burgas</a> <a href='https://www.artstation.com/' class='button'>ArtStation</a> <a href='https://xkcd.com' class='button'>xkcd</a></li>
+                <br>
+                <li><a href='https://ascension.gg' class='button'>Ascension</a> <a href='https://www.dalaran-wow.com/' class='button'>Dalaran</a> <a href='https://www.warmane.com' class='button'>Warmane</a></li>
+                <br>
+                <li><a href='https://www.warcrafttavern.com/wotlk/' class='button'>Tavern /WotLK</a></li>
+            </ul>
+            <br />
+        </div>
+
+        <div class="social">
+            <h1><span class="c3"> social, shopping </span></h1>
+            <ul>
+                <li><a href='http://reddit.com' class='button'>reddit</a> <a href='http://reddit.com/r/linux' class='button'>Linux</a> <a href='http://reddit.com/r/manjarolinux' class='button'>Manjaro</a></li>
+                <br>
+                <li><a href='http://reddit.com/r/xfce' class='button'>XFCE</a> <a href='http://reddit.com/r/startpages' class='button'>Startpages</a> <a href='http://reddit.com/r/bulgaria' class='button'>Bulgaria</a></li>
+                <br>
+                <li><a href='http://minds.com' class='button'>Minds</a> <a href='https://www.ozone.bg' class='button'>Ozone</a> <a href='https://www.olx.bg' class='button'>OLX</a></li>
+                <br>
+                <li><a href='https://www.helikon.bg' class='button'>Хеликон</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

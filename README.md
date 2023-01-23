@@ -1,2 +1,0 @@
-# nord-startpage
-Nordic homepage

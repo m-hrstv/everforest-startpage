@@ -19,7 +19,7 @@ body {
 }
 
 .clockdate {
-    margin-top: 50px;
+    margin-top: 22px;
 }
 
 .search {
@@ -97,8 +97,8 @@ li {
 }
 
 .tools, .media, .social {
-    height: 400px;
-    width: 470px;
+    height: 300px;
+    width: 450px;
     display: inline-block;
     vertical-align: middle;
     margin-top: 1.5%;
@@ -113,7 +113,7 @@ li {
     text-align: center;
     font-weight: bold;
     padding: 0.3em;
-    width: 8.5em;
+    width: 8em;
     border: 3px solid #c6a0f6;
     border-radius: 2px;
     position: relative;

@@ -120,7 +120,7 @@ li {
     position: relative;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
     color: #d8dee9;
-    background-color: #272e3350;
+    background-color: #3c484150;
     text-decoration: none;
     transition: 0.3s ease all;
     z-index: 1;
@@ -156,6 +156,7 @@ li {
 
 .media .button {
     border: 3px solid #d699b6;
+    background-color: #493b4050;
 }
 
 .media .button::before {
@@ -164,6 +165,7 @@ li {
 
 .social .button {
     border: 3px solid #dbbc7f;
+    background-color: #45443c50;
 }
 
 .social .button::before {
